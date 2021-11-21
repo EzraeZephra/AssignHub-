@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="{{ url_for('static',filename='style.css') }}"
+      rel="stylesheet"
+    />
+    <title>AssignHub! - Courses Page</title>
+  </head>
+  <body>
+    <h1 class="title2">Courses</h1>
+    {% for x in course %}
+    <details class="accordion">
+      <summary class="accordionHeader">
+        {{x}} - Average Hours: {{hours}}
+        <a href="assignment.html"
+          ><button class="assignButton">± assignments</button></a
+        >
+      </summary>
+      <div class="accordionBody">
+        {% for i in student %}
+        <details class="accordion">
+          <summary class="studentHeader">{{i}} [9 hours]</summary>
+          {% for y in assignments %}
+          <div class="studentBody">{{y}}</div>
+          {% endfor %}
+        </details>
+        {% endfor %}
+      </div>
+    </details>
+    {% endfor %}
+  </body>
+</html>

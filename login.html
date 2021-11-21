@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <link
+        href="{{ url_for('static',filename='style.css') }}"
+        rel="stylesheet"
+      />
+      <title>AssignHub! - Login</title>
+    </head>
+    <body>
+      <div class="container">
+        <header>
+          <h1 class="title">AssignHub! Login</h1>
+          <div class="textbox">
+            <form>
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                class="username"
+              />
+            </form>
+            <form>
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                class="password"
+              />
+            </form>
+          </div>
+          <nav class="start">
+            <a href="courses.html"><button class="bigButton">Submit</button></a>
+          </nav>
+        </header>
+      </div>
+    </body>
+  </html>
+</html>
